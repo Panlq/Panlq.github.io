@@ -63,7 +63,7 @@
 	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
-				<li><a href="/categories/">分类</a></li>
+				<li><a href="/categories">分类</a></li>
 	        
 			</ul>
 		</nav>
@@ -145,7 +145,7 @@
 		        
 					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories/">分类</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -182,42 +182,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="python对excel表格的操作-xlrd和xlwd模块的学习"><a href="#python对excel表格的操作-xlrd和xlwd模块的学习" class="headerlink" title="python对excel表格的操作-xlrd和xlwd模块的学习"></a><center>python对excel表格的操作-xlrd和xlwd模块的学习</center></h2><h4 id="xlrd模块的基本使用："><a href="#xlrd模块的基本使用：" class="headerlink" title="xlrd模块的基本使用："></a>xlrd模块的基本使用：</h4><p>从excel表格中读取数据<br>打开文件：  </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> xlrd</span><br><span class="line">workbook = xlrd.open_workbook(<span class="string">r"C:\Users\asus\Downloads\test.xlsx"</span>)</span><br></pre></td></tr></table></figure>
-<p>常规查看操作命令<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取表格对象</span></span><br><span class="line">sheet1 = workbook.sheet_by_index(<span class="number">0</span>)</span><br><span class="line"><span class="comment"># sheet1 = workbook.sheet_by_name("sheet1")</span></span><br><span class="line"><span class="comment"># 获取整行和整列的值</span></span><br><span class="line">rows = sheet1.row_values(<span class="number">1</span>)  <span class="comment"># 第一行</span></span><br><span class="line">cols = sheet1.col_values(<span class="number">2</span>)  <span class="comment"># 第二列值</span></span><br><span class="line"><span class="comment"># 获取第一行，第0列的单元格的内容</span></span><br><span class="line">sheet1.cell(<span class="number">1</span>,<span class="number">0</span>).value</span><br><span class="line"><span class="comment"># 获取指定单元格内容的数据类型：</span></span><br><span class="line">sheet1.cell(<span class="number">1</span>, <span class="number">0</span>).ctype</span><br></pre></td></tr></table></figure></p>
-<p>单元格内容的数据类型：<br>ctype:  </p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">数值</th>
-<th>0</th>
-<th style="text-align:center">1</th>
-<th>2</th>
-<th style="text-align:center">3</th>
-<th>4</th>
-<th style="text-align:center">5</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">对应的类型</td>
-<td>empty</td>
-<td style="text-align:center">string</td>
-<td>number</td>
-<td style="text-align:center">date</td>
-<td>boolean</td>
-<td style="text-align:center">error</td>
-</tr>
-</tbody>
-</table>
-<p>获取单元内容为日期类型的方式：  </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime,date</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sheet2.cell(<span class="number">1</span>,<span class="number">2</span>).ctype</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sheet2.cell(<span class="number">1</span>,<span class="number">2</span>).value</span><br><span class="line"><span class="number">42129.0</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>xlrd.xldate_as_tuple(sheet2.cell_value(<span class="number">1</span>,<span class="number">2</span>),workbook.datemode)</span><br><span class="line">(<span class="number">2015</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>date_value = xlrd.xldate_as_tuple(sheet2.cell_value(<span class="number">1</span>,<span class="number">2</span>),workbook.datemode)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>date(*date_value[:<span class="number">3</span>])</span><br><span class="line">datetime.date(<span class="number">2015</span>, <span class="number">5</span>, <span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>date(*date_value[:<span class="number">3</span>]).strftime(<span class="string">'%Y/%m/%d'</span>)</span><br><span class="line"><span class="string">'2015/05/05'</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>在python脚本中可以用条件判断：<br>  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (sheet.cell(row,col).ctype == <span class="number">3</span>):</span><br><span class="line">date_value = xlrd.xldate_as_tuple(sheet.cell_value(row,col),workbook.datemode)</span><br><span class="line">date_tmp = date(*date_value[:<span class="number">3</span>]).strftime(<span class="string">'%Y/%m/%d'</span>)</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="写入文件模块-xlwt"><a href="#写入文件模块-xlwt" class="headerlink" title="写入文件模块 xlwt"></a>写入文件模块 xlwt</h4><p>模板格式：<br><img src="&quot;xlwt.png&quot;" alt="/assets/blogimg"><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">sheet1.write(第几行， 第几列， 值， 值的格式)</span></span><br><span class="line"><span class="string">write_merge(x, x + m, y, w+n, string, style)</span></span><br><span class="line"><span class="string">x表示行，y表示列，m表示跨行个数，n表示跨列个数，</span></span><br><span class="line"><span class="string">string表示要写入的单元格内容，style表示单元格样式。其中，x，y，w，h，都是以0开始计算的</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置单元格样式</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_style</span><span class="params">(name, height, bold=False)</span>:</span></span><br><span class="line">  style = xlwt.XFStyle()   <span class="comment"># 初始化样式</span></span><br><span class="line"></span><br><span class="line">  font = xlwt.Font()      <span class="comment"># 为样式创建字体,注意是一个对象</span></span><br><span class="line">  font.name = name</span><br><span class="line">  font.bold = bold</span><br><span class="line">  font.colour_index = <span class="number">4</span>   <span class="comment"># 颜色索引，对应的默认配置中的颜色</span></span><br><span class="line">  font.height = height    <span class="comment"># 字体高度，单位pt</span></span><br><span class="line"></span><br><span class="line">  style.font = font</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> style</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 写入excel</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">write_excel</span><span class="params">()</span>:</span></span><br><span class="line">  <span class="comment"># 创建工作簿</span></span><br><span class="line">  f = xlwt.Workbook()</span><br><span class="line">  <span class="string">'''</span></span><br><span class="line"><span class="string">    创建第一个sheet:</span></span><br><span class="line"><span class="string">      sheet1</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">  sheet1 = f.add_sheet(<span class="string">'sheet1'</span>, cell_overwrite_ok=<span class="keyword">True</span>)  <span class="comment"># 创建sheet</span></span><br><span class="line">  row0 = [<span class="string">'业务'</span>, <span class="string">'状态'</span>, <span class="string">'北京'</span>, <span class="string">'上海'</span>, <span class="string">'广州'</span>, <span class="string">'深圳'</span>, <span class="string">'状态小计'</span>, <span class="string">'合计'</span>]</span><br><span class="line">  column0 = [<span class="string">'机票'</span>, <span class="string">'船票'</span>, <span class="string">'火车票'</span>, <span class="string">'汽车票'</span>, <span class="string">'其它'</span>]</span><br><span class="line">  status = [<span class="string">'预订'</span>, <span class="string">'出票'</span>, <span class="string">'退票'</span>, <span class="string">'业务小计'</span>]</span><br><span class="line"></span><br><span class="line">  <span class="comment"># 生成第一行  标题行</span></span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(row0)):</span><br><span class="line">      sheet1.write(<span class="number">0</span>, i, row0[i], set_style(<span class="string">'Times New Roman'</span>, <span class="number">220</span>, <span class="keyword">True</span>))</span><br><span class="line"></span><br><span class="line">  <span class="comment"># 生成第一列和最后一列(合并4列)</span></span><br><span class="line">  i, j = <span class="number">1</span>, <span class="number">0</span></span><br><span class="line">  <span class="keyword">while</span> i &lt; <span class="number">4</span>*len(column0) <span class="keyword">and</span> j &lt; len(column0):</span><br><span class="line">      <span class="comment"># write_merge()</span></span><br><span class="line">      sheet1.write_merge(i, i+<span class="number">3</span>, <span class="number">0</span>, <span class="number">0</span>, column0[j], set_style(<span class="string">'Arial'</span>,<span class="number">220</span>,<span class="keyword">True</span>))</span><br><span class="line"></span><br><span class="line">      sheet1.write_merge(i, i+<span class="number">3</span>, <span class="number">7</span>, <span class="number">7</span>)  <span class="comment"># 最后一列</span></span><br><span class="line"></span><br><span class="line">      i += <span class="number">4</span></span><br><span class="line">      j += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># 在22行合并第1,2列，合并后的单元格内容为"合计"，并设置了style</span></span><br><span class="line">  sheet1.write_merge(<span class="number">21</span>, <span class="number">21</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="string">"合计"</span>, set_style(<span class="string">'Times New Roman'</span>,<span class="number">220</span>,<span class="keyword">True</span>))</span><br><span class="line"></span><br><span class="line">  <span class="comment"># 生成第二列</span></span><br><span class="line">  i = <span class="number">0</span></span><br><span class="line">  <span class="keyword">while</span> i &lt; <span class="number">4</span>*len(column0):</span><br><span class="line">      <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>, len(status)):</span><br><span class="line">          sheet1.write(j+i+<span class="number">1</span>, <span class="number">1</span>, status[j])</span><br><span class="line">      i += <span class="number">4</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># 保存文件，记得写后缀</span></span><br><span class="line">  f.save(<span class="string">'demo.xls'</span>)</span><br><span class="line">  print(<span class="string">"创建完成"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">  <span class="comment"># generate_workbook()</span></span><br><span class="line">  write_excel()</span><br></pre></td></tr></table></figure></p>
-<p>参考文献：<br>参考：<a href="https://www.cnblogs.com/linyfeng/p/7123423.html" target="_blank" rel="noopener">https://www.cnblogs.com/linyfeng/p/7123423.html</a><br>官方文档：<a href="https://github.com/python-excel/xlwt" target="_blank" rel="noopener">https://github.com/python-excel/xlwt</a></p>
-
+        <h4 id="xlrd模块的基本使用："><a href="#xlrd模块的基本使用：" class="headerlink" title="xlrd模块的基本使用："></a>xlrd模块的基本使用：</h4><p>从excel表格中读取数据<br>打开文件：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> xlrd</span><br><span class="line">workbook = xlrd.open_workbook(<span class="string">r"C:\Users\asus\Downloads\test.xlsx"</span>)</span><br></pre></td></tr></table></figure></p>
+<p>常规查看操作命令<br>
+        
+          <a class="article-more-a" href="/2018/05/31/python对excel表格的操作-xlwt-xlrd/#more">more >></a>
+        
       
 
       
@@ -230,7 +199,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">python, excel</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">python-excel</a>
         		</li>
       		
 		</ul>
@@ -303,14 +272,9 @@
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        
+          <a class="article-more-a" href="/2018/05/27/hello-world/#more">more >></a>
+        
       
 
       
@@ -445,7 +409,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">python, excel</a>
+                <a href="javascript:void(0)" class="js-tag color3">python-excel</a>
               </li>
             
             <div class="clearfix"></div>
