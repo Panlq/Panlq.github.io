@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>tags | Mr.Pan‘s Blog</title>
+  <title>PIL模块学习-强大的图像处理包 | Mr.Pan‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Write more do more &amp;gt; write less do more">
-<meta name="keywords" content="Python, 程序猿">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+  <meta name="description" content="PIL: python imaging library, 强大的图像处理包，api简单易用, PIL仅支持到Python 2.7, python3 直接安装pillow（后来由一群志愿者整合的兼容包）  pip3 install pillow      接口使用：123456789101112131415161718192021222324# 1.读取图片 传入文件路径，文件名from PIL i">
+<meta name="keywords" content="python模块">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PIL模块学习-强大的图像处理包">
+<meta property="og:url" content="http://yoursite.com/2018/07/01/PIL模块学习-强大的图像处理包/index.html">
 <meta property="og:site_name" content="Mr.Pan‘s Blog">
-<meta property="og:description" content="Write more do more &amp;gt; write less do more">
+<meta property="og:description" content="PIL: python imaging library, 强大的图像处理包，api简单易用, PIL仅支持到Python 2.7, python3 直接安装pillow（后来由一群志愿者整合的兼容包）  pip3 install pillow      接口使用：123456789101112131415161718192021222324# 1.读取图片 传入文件路径，文件名from PIL i">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-31T06:19:48.378Z">
+<meta property="og:image" content="https://cdn.liaoxuefeng.com/cdn/files/attachments/001407671964310a6b503be6fcb4648928e2e4c522d04c7000">
+<meta property="og:updated_time" content="2018-07-01T13:01:00.596Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="Write more do more &amp;gt; write less do more">
+<meta name="twitter:title" content="PIL模块学习-强大的图像处理包">
+<meta name="twitter:description" content="PIL: python imaging library, 强大的图像处理包，api简单易用, PIL仅支持到Python 2.7, python3 直接安装pillow（后来由一群志愿者整合的兼容包）  pip3 install pillow      接口使用：123456789101112131415161718192021222324# 1.读取图片 传入文件路径，文件名from PIL i">
+<meta name="twitter:image" content="https://cdn.liaoxuefeng.com/cdn/files/attachments/001407671964310a6b503be6fcb4648928e2e4c522d04c7000">
   
     <link rel="alternative" href="/atom.xml" title="Mr.Pan‘s Blog" type="application/atom+xml">
   
@@ -161,27 +163,34 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-PIL模块学习-强大的图像处理包" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      tags
+      PIL模块学习-强大的图像处理包
     </h1>
   
 
         
-        <a href="/tags/index.html" class="archive-article-date">
-  	<time datetime="2018-05-31T06:19:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-31</time>
+        <a href="/2018/07/01/PIL模块学习-强大的图像处理包/" class="archive-article-date">
+  	<time datetime="2018-07-01T12:43:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>PIL: python imaging library, 强大的图像处理包，api简单易用, PIL仅支持到Python 2.7, python3 直接安装pillow（后来由一群志愿者整合的兼容包）</p>
+<blockquote>
+<p>pip3 install pillow    </p>
+</blockquote>
+<p>接口使用：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.读取图片 传入文件路径，文件名</span></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line">im = Image.open(<span class="string">'filename'</span>)</span><br><span class="line">im = Image.open(<span class="string">'/Users/michael/test.jpg'</span>)</span><br><span class="line"><span class="comment"># 2.获得图像尺寸:</span></span><br><span class="line">w, h = im.size</span><br><span class="line"><span class="comment"># 缩放到50%</span></span><br><span class="line">im.thumbnail((w//<span class="number">2</span>, h//<span class="number">2</span>))</span><br><span class="line"><span class="comment"># 3.显示图片</span></span><br><span class="line">im.show()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.保存图片</span></span><br><span class="line"><span class="comment"># 保存图像为gif格式,等</span></span><br><span class="line">im.save(<span class="string">'save.gif'</span>, <span class="string">"GIF"</span>)</span><br><span class="line">im.save(<span class="string">'save.gif'</span>, <span class="string">"JPG"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5 图片裁剪功能</span></span><br><span class="line"><span class="comment"># 设置图片裁剪区域</span></span><br><span class="line">box = (<span class="number">100</span>, <span class="number">100</span>, <span class="number">400</span>, <span class="number">400</span>)</span><br><span class="line"><span class="comment"># 注意传入的是一个元组，im对象的很多api方法都是传入元组的</span></span><br><span class="line">region = im.crop(box)   <span class="comment"># 返回一个新的图像对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 6. 图像黏贴（合并</span></span><br><span class="line">im.paste(region, box)  <span class="comment">#粘贴box大小的region到原先的图片对象中</span></span><br></pre></td></tr></table></figure></p>
+<p>其他功能如切片、旋转、滤镜、输出文字、调色板等一应俱全<br>模糊效果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image, ImageFilter</span><br><span class="line"><span class="comment"># 打开一个jpg图像文件，注意是当前路径:</span></span><br><span class="line">im = Image.open(<span class="string">'test.jpg'</span>)</span><br><span class="line"><span class="comment"># 应用模糊滤镜:</span></span><br><span class="line">im2 = im.filter(ImageFilter.BLUR)</span><br><span class="line">im2.save(<span class="string">'blur.jpg'</span>, <span class="string">'jpeg'</span>)</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://cdn.liaoxuefeng.com/cdn/files/attachments/001407671964310a6b503be6fcb4648928e2e4c522d04c7000" alt=""></p>
+
       
 
       
@@ -210,6 +219,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">python模块</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -260,7 +280,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/tags/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/01/PIL模块学习-强大的图像处理包/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -272,6 +292,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2018/07/09/异步协程模块async-aiohttp学习/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          异步协程模块async&amp;aiohttp学习
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/05/31/python对excel表格的操作-xlwt-xlrd/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python对excel表格的操作(xlwt,xlrd)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -322,7 +361,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
