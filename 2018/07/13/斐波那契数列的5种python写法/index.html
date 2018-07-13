@@ -6,20 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://plq.91sq.cc">
-  <title>Hello World | Mr.Pan‘s Blog</title>
+  <title>斐波那契数列的5种python写法 | Mr.Pan‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta name="keywords" content="Python, 程序猿">
+  <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;斐波那契数列（Fibonacci sequence），又称黄金分割数列、因数学家列昂纳多·斐波那契（Leonardoda Fibonacci）以兔子繁殖为例子而引入，故又称为“兔子数列”，指的是这样一个数列：1、1、2、3、5、8、13、21、34、……在数学上，斐波纳契数列以如下被以递归的方法定义：F(1)=1，F(2)=1">
+<meta name="keywords" content="python,面试题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://plq.91sq.cc/2018/05/27/hello-world/index.html">
+<meta property="og:title" content="斐波那契数列的5种python写法">
+<meta property="og:url" content="http://plq.91sq.cc/2018/07/13/斐波那契数列的5种python写法/index.html">
 <meta property="og:site_name" content="Mr.Pan‘s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;斐波那契数列（Fibonacci sequence），又称黄金分割数列、因数学家列昂纳多·斐波那契（Leonardoda Fibonacci）以兔子繁殖为例子而引入，故又称为“兔子数列”，指的是这样一个数列：1、1、2、3、5、8、13、21、34、……在数学上，斐波纳契数列以如下被以递归的方法定义：F(1)=1，F(2)=1">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-31T05:44:28.968Z">
+<meta property="og:image" content="http://plq.91sq.cc/assets/blogimg/fibonacci1.jpg">
+<meta property="og:image" content="http://plq.91sq.cc/assets/blogimg/fibonacci2.png">
+<meta property="og:updated_time" content="2018-07-13T16:56:46.997Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="斐波那契数列的5种python写法">
+<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;斐波那契数列（Fibonacci sequence），又称黄金分割数列、因数学家列昂纳多·斐波那契（Leonardoda Fibonacci）以兔子繁殖为例子而引入，故又称为“兔子数列”，指的是这样一个数列：1、1、2、3、5、8、13、21、34、……在数学上，斐波纳契数列以如下被以递归的方法定义：F(1)=1，F(2)=1">
+<meta name="twitter:image" content="http://plq.91sq.cc/assets/blogimg/fibonacci1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Mr.Pan‘s Blog" type="application/atom+xml">
   
@@ -161,27 +164,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-斐波那契数列的5种python写法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      斐波那契数列的5种python写法
     </h1>
   
 
 <!-- 上面是yilia主题，下面是我自己添加的leancloud阅读量统计 -->
 
   <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/05/27/hello-world/" class="pageViews"></span>次
+      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/07/13/斐波那契数列的5种python写法/" class="pageViews"></span>次
   </a>
 
 
         
-        <a href="/2018/05/27/hello-world/" class="archive-article-date">
-  	<time datetime="2018-05-27T13:53:27.455Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-27</time>
+        <a href="/2018/07/13/斐波那契数列的5种python写法/" class="archive-article-date">
+  	<time datetime="2018-07-13T10:57:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-13</time>
 </a>
 
         
@@ -189,16 +192,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;斐波那契数列（Fibonacci sequence），又称黄金分割数列、因数学家<strong>列昂纳多·斐波那契</strong>（Leonardoda Fibonacci）以兔子繁殖为例子而引入，故又称为“兔子数列”，指的是这样一个数列：1、1、2、3、5、8、13、21、34、……在数学上，斐波纳契数列以如下被以递归的方法定义：F(1)=1，F(2)=1, F(n)=F(n-1)+F(n-2)（n&gt;=2，n∈N*）</p>
+<p><img src="/assets/blogimg/fibonacci1.jpg" alt=""></p>
+<blockquote>
+<p>斐波那契数列，难点在于算法，还有如果变成生成器，generator，就要用for循环去遍历可迭代的generator  </p>
+</blockquote>
+<h4 id="第一种递归法"><a href="#第一种递归法" class="headerlink" title="第一种递归法"></a>第一种递归法</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib_recur</span><span class="params">(n)</span>:</span></span><br><span class="line">  <span class="keyword">assert</span> n &gt;= <span class="number">0</span>, <span class="string">"n &gt; 0"</span></span><br><span class="line">  <span class="keyword">if</span> n &lt;= <span class="number">1</span>:</span><br><span class="line">    <span class="keyword">return</span> n</span><br><span class="line">  <span class="keyword">return</span> fib_recur(n<span class="number">-1</span>) + fib_recur(n<span class="number">-2</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">20</span>):</span><br><span class="line">    print(fib_recur(i), end=<span class="string">' '</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>写法最简洁，但是效率最低，会出现大量的重复计算，时间复杂度O（1.618^n）,而且最深度1000  </p>
+</blockquote>
 <a id="more"></a>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h4 id="第二种递推法"><a href="#第二种递推法" class="headerlink" title="第二种递推法"></a>第二种递推法</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib_loop</span><span class="params">(n)</span>:</span></span><br><span class="line">  a, b = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> range(n+<span class="number">1</span>):</span><br><span class="line">    a, b = b, a+b</span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">20</span>):</span><br><span class="line">  print(fib_loop(i), end=<span class="string">' '</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>递推法，就是递增法，时间复杂度是 O(n)，呈线性增长，如果数据量巨大，速度会越拖越慢  </p>
+</blockquote>
+<h4 id="第三种生成器"><a href="#第三种生成器" class="headerlink" title="第三种生成器"></a>第三种生成器</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib_loop_while</span><span class="params">(max)</span>:</span></span><br><span class="line">  a, b = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">  <span class="keyword">while</span> max &gt; <span class="number">0</span>:</span><br><span class="line">    a, b = b, a+b</span><br><span class="line">    max -= <span class="number">1</span></span><br><span class="line">    <span class="keyword">yield</span> a</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> fib(<span class="number">10</span>):</span><br><span class="line">    print(i, end=<span class="string">' '</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>带有yield的函数都被看成生成器，生成器是可迭代对象，且具备__iter__ 和 __next__方法， 可以遍历获取元素</p>
+</blockquote>
+<h4 id="第四种类实现内部魔法方法"><a href="#第四种类实现内部魔法方法" class="headerlink" title="第四种类实现内部魔法方法"></a>第四种类实现内部魔法方法</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fibonacci</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, num)</span>:</span></span><br><span class="line">        self.num = num</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__iter__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.num &lt; <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">        a, b = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> self.num &gt; <span class="number">0</span>:</span><br><span class="line">            a, b = a + b, a</span><br><span class="line">            self.num -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">yield</span> a</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__next__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.__iter__()</span><br><span class="line"></span><br><span class="line">f = Fibonacci(<span class="number">15</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> f:</span><br><span class="line">  print(i)</span><br></pre></td></tr></table></figure>
+<h4 id="第五种-矩阵"><a href="#第五种-矩阵" class="headerlink" title="第五种-矩阵"></a>第五种-矩阵</h4><p><img src="/assets/blogimg/fibonacci2.png" alt=""><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### 1</span></span><br><span class="line"><span class="keyword">import</span> numpy</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib_matrix</span><span class="params">(n)</span>:</span></span><br><span class="line">    res = pow((numpy.matrix([[<span class="number">1</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">0</span>]])), n) * numpy.matrix([[<span class="number">1</span>], [<span class="number">0</span>]])</span><br><span class="line">    <span class="keyword">return</span> res[<span class="number">0</span>][<span class="number">0</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    print(int(fib_matrix(i)), end=<span class="string">' '</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">### 2</span></span><br><span class="line"><span class="comment"># 使用矩阵计算斐波那契数列</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Fibonacci_Matrix_tool</span><span class="params">(n)</span>:</span></span><br><span class="line">    Matrix = npmpy.matrix(<span class="string">"1 1;1 0"</span>)</span><br><span class="line">    <span class="comment"># 返回是matrix类型</span></span><br><span class="line">    <span class="keyword">return</span> pow(Matrix, n)  <span class="comment"># pow函数速度快于 使用双星好 **</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Fibonacci_Matrix</span><span class="params">(n)</span>:</span></span><br><span class="line">    result_list = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, n):</span><br><span class="line">        result_list.append(numpy.array(Fibonacci_Matrix_tool(i))[<span class="number">0</span>][<span class="number">0</span>])</span><br><span class="line">    <span class="keyword">return</span> result_list</span><br><span class="line"><span class="comment"># 调用</span></span><br><span class="line">Fibonacci_Matrix(<span class="number">10</span>)</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>因为幂运算可以使用二分加速，所以矩阵法的时间复杂度为 O(log n)<br>用科学计算包numpy来实现矩阵法 O(log n)</p>
+</blockquote>
 
       
 
@@ -233,7 +249,33 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">面试题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -283,7 +325,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://plq.91sq.cc/2018/05/27/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://plq.91sq.cc/2018/07/13/斐波那契数列的5种python写法/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -297,15 +339,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/31/python对excel表格的操作-xlwt-xlrd/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          python对excel表格的操作(xlwt,xlrd)
-        
-      </div>
-    </a>
   
+    <a href="/2018/07/09/异步协程模块async-aiohttp学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">异步协程模块async&amp;aiohttp学习</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -323,6 +361,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一种递归法"><span class="toc-number">1.</span> <span class="toc-text">第一种递归法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二种递推法"><span class="toc-number">2.</span> <span class="toc-text">第二种递推法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三种生成器"><span class="toc-number">3.</span> <span class="toc-text">第三种生成器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第四种类实现内部魔法方法"><span class="toc-number">4.</span> <span class="toc-text">第四种类实现内部魔法方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第五种-矩阵"><span class="toc-number">5.</span> <span class="toc-text">第五种-矩阵</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -333,7 +384,7 @@
   
 
   
-  <div id="SOHUCS" sid="hello-world" ></div> 
+  <div id="SOHUCS" sid="斐波那契数列的5种python写法" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
