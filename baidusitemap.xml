@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://plq.91sq.cc/2019/03/29/Read-large-file-with-python/</loc>
+    <lastmod>2019-03-28T16:45:00.757Z</lastmod>
+    <data>
+        <display>
+        <title>Read large file with python</title>
+        <pubTime>2019-03-28T16:35:44.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="python学习" url="http://plq.91sq.cc/categories/python%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://plq.91sq.cc/2018/07/13/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E7%9A%845%E7%A7%8Dpython%E5%86%99%E6%B3%95/</loc>
     <lastmod>2019-03-28T12:09:42.556Z</lastmod>
     <data>
@@ -19,26 +39,6 @@
            
              
               <breadCrumb title="算法" url="http://plq.91sq.cc/categories/%E7%AE%97%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://plq.91sq.cc/2018/05/31/python%E5%AF%B9excel%E8%A1%A8%E6%A0%BC%E7%9A%84%E6%93%8D%E4%BD%9C-xlwt-xlrd/</loc>
-    <lastmod>2019-03-28T12:09:26.885Z</lastmod>
-    <data>
-        <display>
-        <title>python对excel表格的操作(xlwt,xlrd)</title>
-        <pubTime>2018-05-31T05:16:02.000Z</pubTime>
-        
-        <tag>python-excel</tag>
-         
-         
-           
-             
-              <breadCrumb title="python学习" url="http://plq.91sq.cc/categories/python%E5%AD%A6%E4%B9%A0/"/>
           
         </display>
     </data>
