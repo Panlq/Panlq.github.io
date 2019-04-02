@@ -104,20 +104,20 @@
 
 
 
-  <meta name="description" content="PIL: python imaging library, 强大的图像处理包，api简单易用, PIL仅支持到Python 2.7, python3 直接安装pillow（后来由一群志愿者整合的兼容包）">
-<meta name="keywords" content="python模块">
+  <meta name="description" content="环境- Linux: Ubuntu 16.04 - uWSGI        2.0.18  - Flask         1.0.2 - supervisor    3.2.0 - nginx/1.8.1 首先区分几个概念">
+<meta name="keywords" content="python,deploy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PIL模块学习-强大的图像处理包">
-<meta property="og:url" content="http://plq.91sq.cc/2018/07/01/PIL模块学习-强大的图像处理包/index.html">
+<meta property="og:title" content="flask+nginx+uwsgi+supervisor项目部署">
+<meta property="og:url" content="http://plq.91sq.cc/2019/04/02/flask-nginx-uwsgi-supervisor项目部署/index.html">
 <meta property="og:site_name" content="Mr.Pan Blog">
-<meta property="og:description" content="PIL: python imaging library, 强大的图像处理包，api简单易用, PIL仅支持到Python 2.7, python3 直接安装pillow（后来由一群志愿者整合的兼容包）">
+<meta property="og:description" content="环境- Linux: Ubuntu 16.04 - uWSGI        2.0.18  - Flask         1.0.2 - supervisor    3.2.0 - nginx/1.8.1 首先区分几个概念">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://cdn.liaoxuefeng.com/cdn/files/attachments/001407671964310a6b503be6fcb4648928e2e4c522d04c7000">
-<meta property="og:updated_time" content="2019-03-28T12:09:17.392Z">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/778496/201904/778496-20190401002529915-1118976912.png">
+<meta property="og:updated_time" content="2019-04-02T07:18:01.449Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PIL模块学习-强大的图像处理包">
-<meta name="twitter:description" content="PIL: python imaging library, 强大的图像处理包，api简单易用, PIL仅支持到Python 2.7, python3 直接安装pillow（后来由一群志愿者整合的兼容包）">
-<meta name="twitter:image" content="https://cdn.liaoxuefeng.com/cdn/files/attachments/001407671964310a6b503be6fcb4648928e2e4c522d04c7000">
+<meta name="twitter:title" content="flask+nginx+uwsgi+supervisor项目部署">
+<meta name="twitter:description" content="环境- Linux: Ubuntu 16.04 - uWSGI        2.0.18  - Flask         1.0.2 - supervisor    3.2.0 - nginx/1.8.1 首先区分几个概念">
+<meta name="twitter:image" content="https://img2018.cnblogs.com/blog/778496/201904/778496-20190401002529915-1118976912.png">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="http://plq.91sq.cc/2018/07/01/PIL模块学习-强大的图像处理包/"/>
+  <link rel="canonical" href="http://plq.91sq.cc/2019/04/02/flask-nginx-uwsgi-supervisor项目部署/"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>PIL模块学习-强大的图像处理包 | Mr.Pan Blog</title>
+  <title>flask+nginx+uwsgi+supervisor项目部署 | Mr.Pan Blog</title>
   
 
 
@@ -387,7 +387,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://plq.91sq.cc/2018/07/01/PIL模块学习-强大的图像处理包/"/>
+    <link itemprop="mainEntityOfPage" href="http://plq.91sq.cc/2019/04/02/flask-nginx-uwsgi-supervisor项目部署/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Pan"/>
@@ -404,7 +404,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">PIL模块学习-强大的图像处理包
+          <h2 class="post-title" itemprop="name headline">flask+nginx+uwsgi+supervisor项目部署
 
               
             
@@ -430,28 +430,34 @@
                 
               
 
-              <time title="创建时间：2018-07-01 20:43:47" itemprop="dateCreated datePublished" datetime="2018-07-01T20:43:47+08:00">2018-07-01</time>
+              <time title="创建时间：2019-04-02 15:12:56 / 修改时间：15:18:01" itemprop="dateCreated datePublished" datetime="2019-04-02T15:12:56+08:00">2019-04-02</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-03-28 20:09:17" itemprop="dateModified" datetime="2019-03-28T20:09:17+08:00">2019-03-28</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python学习/" itemprop="url" rel="index"><span itemprop="name">python学习</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -465,8 +471,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2018/07/01/PIL模块学习-强大的图像处理包/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/07/01/PIL模块学习-强大的图像处理包/" itemprop="commentCount"></span>
+                <a href="/2019/04/02/flask-nginx-uwsgi-supervisor项目部署/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/02/flask-nginx-uwsgi-supervisor项目部署/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -474,7 +480,7 @@
 
           
           
-            <span id="/2018/07/01/PIL模块学习-强大的图像处理包/" class="leancloud_visitors" data-flag-title="PIL模块学习-强大的图像处理包">
+            <span id="/2019/04/02/flask-nginx-uwsgi-supervisor项目部署/" class="leancloud_visitors" data-flag-title="flask+nginx+uwsgi+supervisor项目部署">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -499,7 +505,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">800</span>
+                <span title="本文字数">5.4k</span>
               
 
               
@@ -513,7 +519,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 mins</span>
+                <span title="阅读时长">5 mins</span>
               
             </div>
           
@@ -533,16 +539,112 @@
       
 
       
-        <p>PIL: python imaging library, 强大的图像处理包，api简单易用, PIL仅支持到Python 2.7, python3 直接安装pillow（后来由一群志愿者整合的兼容包）</p>
+        <h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><pre><code>- Linux: Ubuntu 16.04
+- uWSGI        2.0.18 
+- Flask         1.0.2
+- supervisor    3.2.0
+- nginx/1.8.1
+</code></pre><h3 id="首先区分几个概念"><a href="#首先区分几个概念" class="headerlink" title="首先区分几个概念"></a>首先区分几个概念</h3><p><img src="https://img2018.cnblogs.com/blog/778496/201904/778496-20190401002529915-1118976912.png" alt="uwsgi和WSGI协议"></p>
 <a id="more"></a>
+<ol>
+<li><p>WSGI</p>
+<ul>
+<li>Web Server Gateway Interface (web服务器网管接口)</li>
+<li>是一种规范，是web服务器和web应用(django/flask) 之间的接口，是二者之间的通信桥梁</li>
+<li>没有官方的实现，更像是一个协议，约定俗成的，规定WSGI application 应该实现为一个可调用的对象。只要遵循这些协议，WSGI应用都可以在任何服务器上运行</li>
+</ul>
+</li>
+<li><p>uWSGI</p>
+<ul>
+<li>是一个web服务器，实现了WSGI协议，uwsgi、http等协议</li>
+<li>代码完全用c编写，效率高性能稳定，用于接收前端服务器转发的动态请求并处理后给web应用程序</li>
+</ul>
+</li>
+<li><p>uwsgi<br> 是uWSGI服务器实现的独有的协议，是一种传输协议，用户uWSGI与其他服务器间通信(<br>如与Nginx之间通信)</p>
+</li>
+</ol>
 <blockquote>
-<p>pip3 install pillow    </p>
+<p>在Django中启动文件是wsgi.py, 该文件在生成Django目录的时候便会自动生成，用于web server 与 Django 通信，相当于提供了一个可调用的application对象，在这个类中实现了call方法。  </p>
 </blockquote>
-<p>接口使用：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.读取图片 传入文件路径，文件名</span></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line">im = Image.open(<span class="string">'filename'</span>)</span><br><span class="line">im = Image.open(<span class="string">'/Users/michael/test.jpg'</span>)</span><br><span class="line"><span class="comment"># 2.获得图像尺寸:</span></span><br><span class="line">w, h = im.size</span><br><span class="line"><span class="comment"># 缩放到50%</span></span><br><span class="line">im.thumbnail((w//<span class="number">2</span>, h//<span class="number">2</span>))</span><br><span class="line"><span class="comment"># 3.显示图片</span></span><br><span class="line">im.show()</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 4.保存图片</span></span><br><span class="line"><span class="comment"># 保存图像为gif格式,等</span></span><br><span class="line">im.save(<span class="string">'save.gif'</span>, <span class="string">"GIF"</span>)</span><br><span class="line">im.save(<span class="string">'save.gif'</span>, <span class="string">"JPG"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5 图片裁剪功能</span></span><br><span class="line"><span class="comment"># 设置图片裁剪区域</span></span><br><span class="line">box = (<span class="number">100</span>, <span class="number">100</span>, <span class="number">400</span>, <span class="number">400</span>)</span><br><span class="line"><span class="comment"># 注意传入的是一个元组，im对象的很多api方法都是传入元组的</span></span><br><span class="line">region = im.crop(box)   <span class="comment"># 返回一个新的图像对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 6. 图像黏贴（合并</span></span><br><span class="line">im.paste(region, box)  <span class="comment">#粘贴box大小的region到原先的图片对象中</span></span><br></pre></td></tr></table></figure>
-<p>其他功能如切片、旋转、滤镜、输出文字、调色板等一应俱全<br>模糊效果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image, ImageFilter</span><br><span class="line"><span class="comment"># 打开一个jpg图像文件，注意是当前路径:</span></span><br><span class="line">im = Image.open(<span class="string">'test.jpg'</span>)</span><br><span class="line"><span class="comment"># 应用模糊滤镜:</span></span><br><span class="line">im2 = im.filter(ImageFilter.BLUR)</span><br><span class="line">im2.save(<span class="string">'blur.jpg'</span>, <span class="string">'jpeg'</span>)</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://cdn.liaoxuefeng.com/cdn/files/attachments/001407671964310a6b503be6fcb4648928e2e4c522d04c7000" alt=""></p>
-<p>参考：<a href="www.liaoxuefeng.com">廖雪峰的官方网站</a></p>
+<blockquote>
+<p>在flask 中 app = Flask(<strong>name</strong>) 所在的启动文件 manager.py 便是与web server 进行通信的 application可调用对象</p>
+</blockquote>
+<h3 id="简单的服务器项目准备"><a href="#简单的服务器项目准备" class="headerlink" title="简单的服务器项目准备"></a>简单的服务器项目准备</h3><p>新建一个项目并写一个简单的flask web 服务器app<br>目录~/Desktop/flask_deploy/manager.py<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="comment"># coding=utf8</span></span><br><span class="line">  <span class="number">2</span> <span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">  <span class="number">3</span> </span><br><span class="line"></span><br><span class="line">  <span class="number">4</span> app = Flask(__name__)</span><br><span class="line">  <span class="number">5</span> </span><br><span class="line">  <span class="number">6</span> </span><br><span class="line">  <span class="number">7</span> @app.route(<span class="string">'/'</span>, methods=[<span class="string">'GET'</span>])</span><br><span class="line">  <span class="number">8</span> <span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">  <span class="number">9</span>    <span class="keyword">return</span> <span class="string">'hello world'</span></span><br><span class="line"> <span class="number">10</span> </span><br><span class="line"> <span class="number">11</span> </span><br><span class="line"> <span class="number">12</span> <span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line"> <span class="number">13</span>    app.run(debug=<span class="keyword">False</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="1-配置python项目虚拟环境"><a href="#1-配置python项目虚拟环境" class="headerlink" title="1 配置python项目虚拟环境"></a>1 配置python项目虚拟环境</h3><ul>
+<li><p>安装虚拟环境管理工具</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install virtualenv virtualenvwrapper</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编辑主目录下的.bashrc文件,添加以下内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> WORKON_HOME=<span class="variable">$HOME</span>/.virtualenvs  <span class="comment"># ./virtualvenvs便是虚拟环境安装目录</span></span><br><span class="line"><span class="built_in">source</span> /urs/<span class="built_in">local</span>/bin/virtualenvwrapper.sh</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>可以通过whereis virtaulenvwrapper.sh 查找该源文件<br><a href="https://blog.csdn.net/l1902090/article/details/24887997" target="_blank" rel="noopener">inux命令和文件查找</a></p>
+<ul>
+<li>执行以下命令使配置生效<blockquote>
+<p>source ./bashrc</p>
+</blockquote>
+</li>
+<li>相关命令<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkvirtualenv -p python3 env_name  <span class="comment"># -p 指定python环境</span></span><br><span class="line">workon + tab*2 <span class="comment"># 查看本机下有哪些虚拟环境</span></span><br><span class="line">workon env_nmae  <span class="comment"># 进入虚拟环境</span></span><br><span class="line">deactivate       <span class="comment"># 退出虚拟环境</span></span><br><span class="line">rmvirtualenv env_name    <span class="comment"># 删除虚拟环境</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-uwsgi安装与配置"><a href="#2-uwsgi安装与配置" class="headerlink" title="2 uwsgi安装与配置"></a>2 uwsgi安装与配置</h3><p>在当前虚拟环境下，进行安装相应包</p>
+<blockquote>
+<p>pip install falsk uwsgi<br>在当前项目目录下创建文件 ~/Desktop/flask_deploy/uwsgi.ini<br>vi uwsgi.ini<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">[uwsgi]</span><br><span class="line"><span class="comment"># 使用nginx连接时使用socket通信</span></span><br><span class="line">socket=127.0.0.1:8000</span><br><span class="line"><span class="comment"># 直接使用自带web server 使用http通信</span></span><br><span class="line"><span class="comment">#http=127.0.0.1:8000</span></span><br><span class="line"><span class="comment"># 指定项目目录</span></span><br><span class="line"><span class="built_in">chdir</span>=/home/python/Desktop/flask_deploy</span><br><span class="line"><span class="comment"># 指定python虚拟环境</span></span><br><span class="line">home=/home/python/.virtualenvs/deploy</span><br><span class="line"><span class="comment"># 指定加载的WSGI文件</span></span><br><span class="line">wsgi-file=manager.py</span><br><span class="line"><span class="comment"># 指定uWSGI加载的模块中哪个变量将被调用</span></span><br><span class="line">callable=app</span><br><span class="line"><span class="comment"># 设置工作进程的数量</span></span><br><span class="line">processes=2</span><br><span class="line"><span class="comment"># 设置每个工作进程的线程数</span></span><br><span class="line">threads=2</span><br><span class="line"><span class="comment"># 将主进程pid写到指定的文件</span></span><br><span class="line">pidfile=%(<span class="built_in">chdir</span>)/uwsgi.pid</span><br><span class="line"><span class="comment"># 日志文件</span></span><br><span class="line">req-logger=file:/home/python/Desktop/flask_deploy/<span class="built_in">log</span>/req.log</span><br><span class="line">logger=file:/home/python/Desktop/flask_deploy/<span class="built_in">log</span>/err.log</span><br><span class="line"></span><br><span class="line"><span class="comment">#uid=xxx # uWSGI服务器运行时的用户id，未设置则为当前启动的用户</span></span><br><span class="line"><span class="comment">#gid=xxx # uWSGI服务器运行时的用户组id</span></span><br><span class="line"><span class="comment">#procname-prefix-spaced=site # 指定工作进程名称的前缀</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>配置文件中指定wsgi启动文件有几种方式  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 指定加载的WSGI文件</span></span><br><span class="line">wsgi-file=manager.py</span><br><span class="line"><span class="comment"># 指定uWSGI加载的模块中哪个变量将被调用</span></span><br><span class="line">callable=app</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 模块名:可调用对象app</span></span><br><span class="line">module=manager:app</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">module=manager</span><br><span class="line">callable=app</span><br></pre></td></tr></table></figure>
+<h5 id="uwsgi相关命令"><a href="#uwsgi相关命令" class="headerlink" title="uwsgi相关命令"></a>uwsgi相关命令</h5><pre><code>uwsgi --ini uwsgi.ini   # 启动   
+uwsgi --stop uwsgi.pip  # 停止  
+pkill -9 uwsgi          # 停止
+</code></pre><h3 id="3-supervisor-安装与监控"><a href="#3-supervisor-安装与监控" class="headerlink" title="3 supervisor 安装与监控"></a>3 supervisor 安装与监控</h3><p>简介: supervisor就是用Python开发的一套通用的进程管理程序，能将一个普通的命令行进程变为后台daemon，并监控进程状态，异常退出时能自动重启。</p>
+<h5 id="安装"><a href="#安装" class="headerlink" title="安装:"></a>安装:</h5><blockquote>
+<p>apt-get install supervisor</p>
+</blockquote>
+<p>默认配置文件在/etc/supervisro/supervisord.conf, 自己开发可以将配置文件写在 /etc/supervisor/conf.d/目录下，文件扩展名必须为*.conf  </p>
+<h5 id="配置解释"><a href="#配置解释" class="headerlink" title="配置解释"></a>配置解释</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[program:uwsgi]</span><br><span class="line"><span class="built_in">command</span>=/home/python/.virtualenvs/deploy/bin/uwsgi /home/python/Desktop/flask_deploy/uwsgi.ini</span><br><span class="line">user=root</span><br><span class="line">autostart=<span class="literal">true</span></span><br><span class="line">autorestart=<span class="literal">true</span></span><br><span class="line">stdout_logfile=/home/python/Desktop/flask_deploy/<span class="built_in">log</span>/uwsgi_supervisor.log</span><br><span class="line">stderr_logfile=/home/python/Desktop/flask_deploy/<span class="built_in">log</span>/uwsgi_supervisor_err.log</span><br></pre></td></tr></table></figure>
+<pre><code>- [program:module_name]表示supervisor的一个模块名  
+- command 程序启动命令如: /usr/bin/python - app.py  
+- user 进程运行的用户身份
+- autostart=true  跟随Supervisor一起启动
+- autorestart=true 挂掉之后自动重启
+- stderr_logfile, stdout_logfile 标准输出，错误日志文件
+</code></pre><h5 id="启动supervisor"><a href="#启动supervisor" class="headerlink" title="启动supervisor"></a>启动supervisor</h5><blockquote>
+<p>sudo supervisord -c /etc/supervisor/supervisord.conf  # supervisord.conf 会自动包含conf.d/目录下的conf文件</p>
+</blockquote>
+<p>相关命令<br>    1️⃣supervisorctl status  # 查看启动的项目<br>    2️⃣supervisorctl start module_name  # 启动项目<br>    3️⃣supervisorctl stop module_name   # 停止木箱<br>    4️⃣supervisorctl shutdown   # 关闭所有项目和服务</p>
+<p>启动后可以 ps -aux | grep 查看 uwsgi 和supervisor 都在运行了</p>
+<h3 id="4-Nginx安装与配置"><a href="#4-Nginx安装与配置" class="headerlink" title="4 Nginx安装与配置"></a>4 Nginx安装与配置</h3><blockquote>
+<p>apt-get install nginx<br>默认安装在/etc/nginx/目录下<br>配置目录 /etc/nginx/conf/flask_deploy.conf<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application/octet-stream;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen  80;</span><br><span class="line">        server_name 127.0.0.1; <span class="comment">#公网地址</span></span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        include      uwsgi_params;</span><br><span class="line">        uwsgi_pass   127.0.0.1:8000;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>启动</p>
+<blockquote>
+<p>usr/sbin/nginx -c /etc/nginx/conf/flask_deploy.conf</p>
+</blockquote>
+<p>相关命令:<br>    1️⃣nginx -s reload<br>    2️⃣nginx -s stop  </p>
+<h4 id="nginx-详细介绍及语法参考-nginx-详细配置说明"><a href="#nginx-详细介绍及语法参考-nginx-详细配置说明" class="headerlink" title="nginx 详细介绍及语法参考:nginx:详细配置说明"></a>nginx 详细介绍及语法参考:<a href="https://juejin.im/post/5bff57246fb9a049be5d3297#heading-39" target="_blank" rel="noopener">nginx:详细配置说明</a></h4><h5 id="不出意外的话浏览器访问-127-0-0-1即可出现hello-world。"><a href="#不出意外的话浏览器访问-127-0-0-1即可出现hello-world。" class="headerlink" title="不出意外的话浏览器访问:127.0.0.1即可出现hello world。"></a>不出意外的话浏览器访问:127.0.0.1即可出现hello world。</h5><h4 id="部署负载均衡"><a href="#部署负载均衡" class="headerlink" title="部署负载均衡"></a>部署负载均衡</h4><p>nginx+uwsgi+flask+supervisor部署负载均衡，</p>
+<ol>
+<li>只需要在项目目录下加一个uwsgi2.ini文件(uWSGI 应用启动配置)，修改soket ip，pipfile,logfile路径即可</li>
+<li>再根据以上步骤在supervisor 配置文件中增加一个uwsgi2的监控模块，增加相应配置</li>
+<li>nginx 负载均衡配置<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    upstream flask &#123;</span><br><span class="line">        server 127.0.0.1:8000;</span><br><span class="line">        server 127.0.0.1:8001;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        listen  80;</span><br><span class="line">        server_name 127.0.0.1; <span class="comment">#公网地址</span></span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        include      uwsgi_params;</span><br><span class="line">        uwsgi_pass   flask;</span><br><span class="line">        proxy_</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>如此，便配置了一个简单的负载均衡的服务器。访问127.0.0.1，同时用tail 命令查看 两个uwsgi配置中文件中设置的req_logfile 可以观察到流量分发的现象。</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>suervisor 是个后台进程管理工具，不仅局限于监控uwsgi 服务器，还可以监控其他 可能意外宕机的服务程序。</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>相对的可作为web服务器的还有Gunicorn 是从Ruby 的(Unicorn)移植的python HTTP 服务器，兼容各种框架，不需要写配置文件，轻量级的资源消耗.</p>
+<ol>
+<li>安装<blockquote>
+<p>pip install gunicorn<br>启动服务器<br>gunicorn -w 4 -b 127.0.0.1:8080 manager:app –daemon    # 已守护进程方式启动，默认为False</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="gunicorn-以配置文件方式启动"><a href="#gunicorn-以配置文件方式启动" class="headerlink" title="gunicorn 以配置文件方式启动"></a>gunicorn 以配置文件方式启动</h4><p>文件名 gunicorn.conf<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 指定web服务器监听的if和端口</span></span><br><span class="line">bind = <span class="string">'127.0.0.1:8080'</span></span><br><span class="line"><span class="comment"># 指定工作进程</span></span><br><span class="line">workers = <span class="number">4</span></span><br><span class="line"><span class="comment"># 指定服务器后台运行</span></span><br><span class="line">daemon = <span class="keyword">True</span></span><br><span class="line"><span class="comment"># 保存主进程id</span></span><br><span class="line">pidfile = <span class="string">'gunicorn.pid'</span></span><br><span class="line"><span class="comment"># 启动服务器之后生成 access.log 保存访问日志</span></span><br><span class="line">accesslog = <span class="string">'access.log'</span></span><br><span class="line"><span class="comment"># 启动服务器之后生成 errorlog , 保存错误日志</span></span><br><span class="line">errorlog = <span class="string">'error.log'</span></span><br></pre></td></tr></table></figure></p>
+<p>启动方式:</p>
+<blockquote>
+<p>gunicorn -c gunicorn.conf manager:app</p>
+</blockquote>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p> <a href="https://www.liaoxuefeng.com/article/0013738926914703df5e93589a14c19807f0e285194fe84000" target="_blank" rel="noopener">Linux后台进程管理利器：supervisor</a><br> <a href="http://xuxping.com/2017/07/09/flask+nginx+uwsgi+supervisor%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" target="_blank" rel="noopener">flask+nginx+uwsgi+supervisor项目部署</a></p>
 
       
     </div>
@@ -566,7 +668,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python模块/" rel="tag"> <i class="fa fa-tag" aria-hidden="true"></i> python模块</a>
+            <a href="/tags/python/" rel="tag"> <i class="fa fa-tag" aria-hidden="true"></i> python</a>
+          
+            <a href="/tags/deploy/" rel="tag"> <i class="fa fa-tag" aria-hidden="true"></i> deploy</a>
           
         </div>
       
@@ -600,8 +704,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/27/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/03/29/Read-large-file-with-python/" rel="next" title="Read large file with python">
+                <i class="fa fa-chevron-left"></i> Read large file with python
               </a>
             
           </div>
@@ -609,10 +713,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/09/异步协程模块async-aiohttp学习/" rel="prev" title="异步协程模块async&aiohttp学习">
-                异步协程模块async&aiohttp学习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -663,8 +763,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -835,6 +944,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#环境"><span class="nav-number">1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#首先区分几个概念"><span class="nav-number">2.</span> <span class="nav-text">首先区分几个概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单的服务器项目准备"><span class="nav-number">3.</span> <span class="nav-text">简单的服务器项目准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-配置python项目虚拟环境"><span class="nav-number">4.</span> <span class="nav-text">1 配置python项目虚拟环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-uwsgi安装与配置"><span class="nav-number">5.</span> <span class="nav-text">2 uwsgi安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#uwsgi相关命令"><span class="nav-number">5.0.1.</span> <span class="nav-text">uwsgi相关命令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-supervisor-安装与监控"><span class="nav-number">6.</span> <span class="nav-text">3 supervisor 安装与监控</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装"><span class="nav-number">6.0.1.</span> <span class="nav-text">安装:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#配置解释"><span class="nav-number">6.0.2.</span> <span class="nav-text">配置解释</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#启动supervisor"><span class="nav-number">6.0.3.</span> <span class="nav-text">启动supervisor</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Nginx安装与配置"><span class="nav-number">7.</span> <span class="nav-text">4 Nginx安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nginx-详细介绍及语法参考-nginx-详细配置说明"><span class="nav-number">7.1.</span> <span class="nav-text">nginx 详细介绍及语法参考:nginx:详细配置说明</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#不出意外的话浏览器访问-127-0-0-1即可出现hello-world。"><span class="nav-number">7.1.1.</span> <span class="nav-text">不出意外的话浏览器访问:127.0.0.1即可出现hello world。</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#部署负载均衡"><span class="nav-number">7.2.</span> <span class="nav-text">部署负载均衡</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">8.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">9.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#gunicorn-以配置文件方式启动"><span class="nav-number">9.1.</span> <span class="nav-text">gunicorn 以配置文件方式启动</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">10.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1050,9 +1176,9 @@
 
 <script>
   var disqus_config = function() {
-    this.page.url = "http://plq.91sq.cc/2018/07/01/PIL模块学习-强大的图像处理包/";
-    this.page.identifier = "2018/07/01/PIL模块学习-强大的图像处理包/";
-    this.page.title = 'PIL模块学习-强大的图像处理包';
+    this.page.url = "http://plq.91sq.cc/2019/04/02/flask-nginx-uwsgi-supervisor项目部署/";
+    this.page.identifier = "2019/04/02/flask-nginx-uwsgi-supervisor项目部署/";
+    this.page.title = 'flask+nginx+uwsgi+supervisor项目部署';
     };
   function loadComments() {
     var d = document, s = d.createElement('script');
